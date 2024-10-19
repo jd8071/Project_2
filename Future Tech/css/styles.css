@@ -1,0 +1,345 @@
+/*
+Author: Jen Dahl
+Date: October 17, 2024
+File Name: styles.css
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, article, section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rules for body and images */
+body {
+    background-color: #00A2E8;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Style rule for box sizing applies to all elements */
+*{
+    box-sizing: border-box;
+}
+
+/* Style rules for mobile viewport */
+
+/* Style rule for header */
+header {
+    top: 0;
+    background-color: #00A2E8;
+    height: 190px;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+header img {
+    margin: 0 auto;
+}
+
+/* Style rules for navigation area */
+nav {
+    padding: 1%;
+    margin-top: 0;
+    margin-bottom: 1%;
+    background-color: #00A2E8;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    font-size: 1.5em;
+    font-family: "Roboto Condensed", sans-serif;
+    border-top: 1px solid black;
+}
+
+nav li:first-child {
+    border-top: none;
+}
+
+nav li a {
+    display: block;
+    color: black;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+/* Show mobile class, hide tab-desk class */
+.mobile {
+    display: block;
+}
+
+.tab-desk {
+    display: none;
+}
+
+/* Style rules for main content */
+main {
+    background-color: #00A2E8;
+    padding: 2%;
+    font-size: 1.15em;
+    font-family: "Roboto Flex", sans-serif;
+}
+
+.mobile h3 {
+    text-shadow: 5px 5px 8px #00425f;
+    text-align: center;
+}
+
+.mobile p {
+    text-align: justify;
+}
+
+article {
+    padding: 2%;
+}
+
+article h3 {
+    text-align: center;
+}
+
+article img {
+    margin: 0 auto;
+}
+
+article ul {
+    margin-left: 10%;
+}
+
+section {
+    border: 1px solid black;
+    padding: 2%;
+    background-color: #015b82;
+    color: white;
+}
+
+section:nth-of-type(2) {
+    background-color: #00425f;
+}
+
+.frame {
+    position: relative;
+    max-width: 450px;
+    margin: 2% auto;
+}
+
+.pic-text {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #99D9EA;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Style rules for footer content */
+
+footer {
+    border-top: 1px dashed black;
+}
+
+footer p {
+    font-size: 0.75em;
+    text-align: center;
+    color: black;
+    padding: 0 1em;
+}
+
+footer p a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 630px), print {
+
+    /* Tablet Viewport: Show tab-desk class, hide mobile class */
+    .tab-desk {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    /* Tablet Viewport: Style rule for header */
+    header {
+        margin-bottom: 5px;
+        position: static;
+    }
+
+    /* Tablet Viewport: Style rules for nav area */
+
+    nav {
+        margin-top: 5px;
+    }
+
+    nav li {
+        border-top: none;
+        display: inline-block;
+        border-right: 1px solid black;
+    }
+
+    nav li:last-child {
+        border-right: none;
+    }
+
+    nav li a {
+        padding: 0.1em 0.75em;
+    }
+
+    /* Tablet Viewport: Style rules for main content */
+    main ul {
+        margin: 0 0 4% 10%;
+    }
+
+    main {
+        text-align: justify;
+    }
+
+    main p {
+        font-size: 1.2em;
+    }
+
+    .tab-desk h2, h3 {
+        text-shadow: 8px 8px 10px #00425f;
+        text-align: center;
+    }
+
+    article {
+        text-align: justify;
+        font-size: 1.5em;
+    }
+
+    article h3 {
+        font-size: 1.6em;
+    }
+
+    article p {
+        font-size: 100%;
+    }
+
+    section {
+        max-width: 500px;
+        padding: 2%;
+        margin: 10% 20%;
+        font-size: 1.2em;
+    }
+
+    .grid {
+        display: block;
+        grid-template-columns: auto;
+        grid-gap: 20px;
+    }
+
+    .pic-text {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1000px), print {
+
+    /* Desktop Viewport: Style rule for header */
+    header {
+        padding-bottom: 0;
+        background: none;
+    }
+
+    /* Desktop Viewport: Style rules for nav area */
+    nav {
+        margin: 4em;
+        font-size: 1.3em;
+        border-bottom: 3px solid black;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        border: none;
+    }
+
+    nav li a {
+        padding: 0.5em 1em;
+    }
+
+    nav li a:hover {
+        color: white;
+        background-color: #00425f;
+        opacity: 0.5;
+    }
+
+    /* Desktop Viewport: Style rules for main content */
+    main {
+        clear: left;
+        background-image: linear-gradient(#00A2E8, #99D9EA);
+    }
+
+    main h1 {
+        font-size: 1.8em;
+    }
+
+    .pic-text {
+        font-size: 1.5em;
+        padding: 20px;
+    }
+
+    .frame {
+        opacity: 0.9;
+    }
+
+    .frame:hover {
+        opacity: 1;
+        box-shadow: 8px 8px 10px #00425f
+    }
+
+    section {
+        margin: 5px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 30px;
+    }
+}
+
+/* Media Query for Large Desktop Viewports */
+@media screen and (min-width: 1921px) {
+
+    main {
+        background-image: linear-gradient(#00A2E8, #99D9EA);
+    }
+
+    .grid {
+        grid-gap: 30px;
+    }
+
+    #wrap {
+        min-width: 1920px;
+        margin: 0 auto;
+        font-size: 150%;
+    }
+}
+
+/* Media Query for Print */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
